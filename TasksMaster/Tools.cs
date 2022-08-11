@@ -21,7 +21,7 @@ internal class Tools
 
     internal static string GetDateInput(string connectionString)
     {
-        Console.WriteLine("\n\nPlease insert the date: (Format: mm-dd-yy). Type 0 to return to main menu.\n\n");
+        Console.WriteLine("\n\nPlease insert the date: (Format: MM-dd-yy). Type 0 to return to main menu.\n\n");
 
         string dateInput = Console.ReadLine();
 
@@ -29,7 +29,7 @@ internal class Tools
 
         while (!DateTime.TryParseExact(dateInput, "MM-dd-yy", new CultureInfo("en-US"), DateTimeStyles.None, out _))
         {
-            Console.WriteLine("\n\nInvalid date. (Format: mm-dd-yy). Type 0 to return to main menu or try again:\n\n");
+            Console.WriteLine("\n\nInvalid date. (Format: MM-dd-yy). Type 0 to return to main menu or try again:\n\n");
             dateInput = Console.ReadLine();
         }
         return dateInput;
