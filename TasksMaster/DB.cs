@@ -50,7 +50,7 @@ internal class DB
                     new Todo
                     {
                         Id = reader.GetInt32(0),
-                        Date = DateTime.ParseExact(reader.GetString(1), "dd-MM-yy", new CultureInfo("en-US")),
+                        Date = DateTime.ParseExact(reader.GetString(1), "MM-dd-yy", new CultureInfo("en-US")),
                         Task = reader.GetString(2)
                     }); ;
                 }
@@ -65,7 +65,7 @@ internal class DB
             Console.WriteLine("------------------------------------------\n");
             foreach (var todo in TodoList)
             {
-                Console.WriteLine($"{todo.Id} - {todo.Date.ToString("dd-MM-yy")} - Task: {todo.Task}");
+                Console.WriteLine($"{todo.Id} - {todo.Date.ToString("MM-dd-yy")} - Task: {todo.Task}");
             }
             Console.WriteLine("------------------------------------------\n");
         }
