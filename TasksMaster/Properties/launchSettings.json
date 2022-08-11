@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TasksMaster": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\Izaya Orihara\\Desktop\\code\\c#\\Main\\TasksMaster"
+    }
+  }
+}
